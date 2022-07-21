@@ -65,6 +65,7 @@ export class EditEmployeeComponent implements OnInit {
   this.router.navigate(['/employee'])*/
   let user = this.userForm.getRawValue();
   this.employeeService.deleteEmployee(user).subscribe(data => {
+    console.log(data);
     this.router.navigate(['/employee'])
 } )
         Swal.fire(
