@@ -1,0 +1,30 @@
+<h1>Add New Employee</h1>
+<form [formGroup]="userForm">
+  <div class="Form-group col-md-3">
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" class="form-control" formControlName="Name">
+    <div class="alert alert-danger" *ngIf=" userForm.get('Name')?.touched && !userForm.get('Name')?.valid"> *First Name is required </div>
+   </div>
+  <div class="Form-group col col-md-3">
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" class="form-control" formControlName="Email">
+    <div class="alert alert-danger" *ngIf=" userForm.get('Email')?.touched && !userForm.get('Email')?.valid"> *Email is required </div>
+  </div>
+  <div class="Form-group col-md-3">
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="number" class="form-control" formControlName="Phone">
+    <div class="alert alert-danger" *ngIf=" userForm.get('Phone')?.touched && !userForm.get('Phone')?.valid">* Phone is required </div>
+  </div>
+  <div class="Form-group col-md-3">
+    <label for="salary">Salary</label>
+    <input id="salary" name="salary" type="number" class="form-control" formControlName="Salary">
+    <div class="alert alert-danger" *ngIf=" userForm.get('Salary')?.touched && !userForm.get('Salary')?.valid"> *Salary is required </div>
+  </div>
+  <div class="Form-group col-md-3">
+    <label for="dept">Department</label>
+    <input id="dept" name="=dept" type="text" class="form-control" formControlName="Department">
+    <div class="alert alert-danger" *ngIf=" userForm.get('Department')?.touched && !userForm.get('Department')?.valid"> *Department is required </div>
+  </div>
+</form>
+<br>
+<button (click)="AddEmp()" class="btn btn-primary">Save</button>

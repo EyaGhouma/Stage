@@ -1,0 +1,15 @@
+<h1>Employees</h1>
+<kendo-grid  [kendoGridBinding]="tabEmployee" [height]="920">
+            <kendo-grid-column field="id" [width]="250"></kendo-grid-column>
+            <kendo-grid-column field="name" [width]="240"></kendo-grid-column>
+            <kendo-grid-column field="email" [width]="200"></kendo-grid-column>
+            <kendo-grid-column field="phone" [width]="180"></kendo-grid-column>
+            <kendo-grid-column field="salary" [width]="180"></kendo-grid-column>
+            <kendo-grid-column field="department" [width]="130"></kendo-grid-column>
+            <kendo-grid-command-column [width]="130">
+              <ng-template kendoGridCellTemplate let-dataItem="dataItem" >
+                  <button (click)="edit(dataItem.id)" kendoGridEditCommand>Edit</button>
+
+              </ng-template>
+          </kendo-grid-command-column>
+</kendo-grid>
